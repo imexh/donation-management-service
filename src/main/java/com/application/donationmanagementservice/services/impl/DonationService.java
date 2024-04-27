@@ -4,14 +4,12 @@ import com.application.donationmanagementservice.common.value.Donation;
 import com.application.donationmanagementservice.controllers.dto.DonationViewResponseDTO;
 import com.application.donationmanagementservice.external.repository.IDonationRepository;
 import com.application.donationmanagementservice.services.IDonationService;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-@RestController
-@RequestMapping("/api/v1/")
+@Service
 public class DonationService implements IDonationService {
     private final IDonationRepository donationRepository;
 
